@@ -235,10 +235,4 @@ int	main(int argc, char **argv)
 	}
 	close(fd);
 	return (0);
-<<<<<<< HEAD
 }
-=======
-}
-
-
->>>>>>> 0a428211304668ac102ec9f8df32e63ff354a9b1
