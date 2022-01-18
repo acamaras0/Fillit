@@ -12,6 +12,7 @@
 
 #include "fillit.h"
 
+
 t_piece	*free_tetri(t_piece *tetri)
 {
 	t_piece	*tmp;
