@@ -15,7 +15,7 @@
 /*
 ** Changes the coordinates of a valid tetrimino to the top-left corner.
 ** All the indexes of x_cord are decreased until at least one is 0.
-** The same is done with y_cord.
+** The same is done with y_cord. 
 */
 
 static void	shift_piece(t_piece *piece)
