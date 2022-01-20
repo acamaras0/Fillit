@@ -36,6 +36,11 @@ void	free_map(t_map *map, int size)
 	ft_memdel((void **)&map);
 }
 
+/*
+** Sets the given character (letter) to the corresponding
+** coordinates of the tetrimino (tetris) on the map.
+*/
+
 void	place_piece(t_map *map, t_piece *tetris, char letter)
 {
 	map->map[tetris->y_cord[0] + tetris->y_shift] \

@@ -20,12 +20,10 @@
 
 typedef struct s_piece
 {
-	char			piece[16];
 	int				x_cord[4];
 	int				y_cord[4];
 	int				x_shift;
 	int				y_shift;
-	int				count;
 	char			letter;
 	char			last_letter;
 	struct s_piece	*next;

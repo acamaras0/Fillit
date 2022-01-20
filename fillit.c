@@ -25,6 +25,14 @@ t_piece	*free_tetri(t_piece *tetri)
 	return (NULL);
 }
 
+/*
+** Takes the file descriptor (fd), the buffer (buf), buffer's index (i)
+** and the number of bytes read (r_bytes). 
+** Iterates through the buffer one piece at a time and checks
+** if it's valid, if so it puts them in a list and assigns them
+** a letter in the alphabetical order. 
+*/
+
 t_piece	*make_piecelist(size_t r_bytes, size_t i, char *buf, int fd)
 {
 	t_piece	*head;
@@ -54,6 +62,13 @@ t_piece	*make_piecelist(size_t r_bytes, size_t i, char *buf, int fd)
 	return (head);
 }
 
+/*
+** read_file function, attempts to read the whole file, up to 546 bytes,
+** which would be required for maximum 26 tetrimino pieces including the
+** '\n'. It checks that the file has no more than 26 pieces nor less than
+** 1 piece assuming that the file is written correctly. 
+*/
+
 t_piece	*read_file(size_t r_bytes, char *buf, int fd)
 {
 	size_t	i;
@@ -61,8 +76,8 @@ t_piece	*read_file(size_t r_bytes, char *buf, int fd)
 
 	i = 0;
 	letter = 'A';
-	r_bytes = read(fd, buf, 545);
-	if (r_bytes > 544 || r_bytes < 19)
+	r_bytes = read(fd, buf, 547);
+	if (r_bytes > 546 || r_bytes < 19)
 		error_exit(fd);
 	buf[r_bytes] = '\0';
 	return (make_piecelist(r_bytes, i, buf, fd));
@@ -77,7 +92,7 @@ void	error_exit(int fd)
 
 int	main(int argc, char **argv)
 {
-	char		buf[545];
+	char		buf[546];
 	int			fd;
 	size_t		r_bytes;
 	t_piece		*tetris;
