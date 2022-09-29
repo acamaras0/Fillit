@@ -9,4 +9,4 @@ the popular game Tetris.
 Fillit is not about recoding Tetris, even if it’s still a variant of this game. Your program will take a file as parameter, which contains a list of Tetriminos, and arrange them
 in order to create the smallest square possible."*
 
-Fillit was my first group project, on each I'd been working with [@andrelmbackman] (https://github.com/andrelmbackman)
+Fillit was my first group project, on each I'd been working with @andrelmbackman (https://github.com/andrelmbackman)
